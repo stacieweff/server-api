@@ -1,20 +1,23 @@
 {
-  "name": "server",
+  "name": "stacie-todos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/nodemon/bin/nodemon.js src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-project": "cd client && npm run build && cd ..",
+    "build-client": "cd client && npm install && cd .. && npm run build-project && cd ..",
+    "build-server": "cd server && npm install && cd ..",
+    "start": "npm run build-client && npm run build-server && cd server && ./node_modules/nodemon/bin/nodemon.js src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stacieweff/server-api.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "mongodb": "^3.1.13",
-    "morgan": "^1.9.1",
-    "nodemon": "^1.18.10"
-  }
+  "bugs": {
+    "url": "https://github.com/stacieweff/server-api/issues"
+  },
+  "homepage": "https://github.com/stacieweff/server-api#readme"
 }
