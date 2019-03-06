@@ -6,7 +6,6 @@ const morgan = require('morgan')
 const path = require('path')
 const app = express() // create your express app
 const directory = path.join(__dirname, '../../client/dist')
-console.log(directory)
 let staticFileMiddleware = express.static(directory)
 const mongo = require('mongodb')
 const MongoClient = mongo.MongoClient
