@@ -80,6 +80,6 @@ app.post('/deleteTodo', (req, res) => {
 
 // app.listen(process.env.PORT || 8081) // client is already running on 8080
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log("App is running on port " + port);
 });
